@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+	{% for i in range(0,len) %}
+		<div class="addedWish">
+				<h2>{{ result[i][0] }}</h2>
+				<p>{{ result[i][1] }}</p>
+				<h3>{{ result[i][2] }}</h3>
+		</div> 
+	{% endfor %}
+{% endblock body %}
+
+{% block wishBox %}
+	<div class="WishAdderBox" >
+		<form action="" method="post">
+	       	{{form.titleText()}}
+	        {{form.WishBox()}}
+			{{form.wishAdd()}}
+			<input type="button" value="Cancel" id="wishCancel" onclick="CloseBox()">
+		</form>
+	</div>
+{% endblock wishBox %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    </head>
+    <body>
+        <div class="navBar">
+            <h1 style="float: left; font-family: monospace; padding-left: 20px; color: white;transform: translateY(10px);">Wish List Maker</h1>
+            <input type="button" value="Add a Wish" id="adder" onmouseover="MkaWish()" onmouseout="MkaPlus()" onclick="OpenWishBox()">
+        </div>
+        <div class="WishAdder" id="wb">
+			{% block wishBox %}{% endblock wishBox %}
+        </div>
+        <div class="wishData">
+			{% block body %}{% endblock body %}           
+        </div>
+        <script>
+            function MkaWish(){
+                document.getElementById("adder").value="Make a wish";
+            }
+            function MkaPlus(){
+                document.getElementById("adder").value="Add a Wish";
+            }
+            function OpenWishBox(){
+                document.getElementById("wb").style.display="Block";
+            }
+            function CloseBox(){
+                document.getElementById("wb").style.display="none";
+            }
+        </script>
+    </body>
+</html>
