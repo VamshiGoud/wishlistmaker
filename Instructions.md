@@ -1,5 +1,7 @@
 # wishlistmaker
-A small application about making wish list
+A small application about making wish list.
+FYI: This is a Python project which uses a thirdparty library called FLASK, So you likely need to install Flask library using the command
+"pip install Flask"
 
 1. Open cmd prompt.
 
